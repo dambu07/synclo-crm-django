@@ -112,17 +112,22 @@ DROP TABLE IF EXISTS `aboutpage_teamsection`;
 CREATE TABLE `aboutpage_teamsection` (
   `id` bigint(20) NOT NULL,
   `name` varchar(200) DEFAULT NULL,
+  `about` longtext DEFAULT NULL,
+  `slug` varchar(200) DEFAULT NULL,
   `position` varchar(200) DEFAULT NULL,
+  `facebook` varchar(500) DEFAULT NULL,
+  `twitter` varchar(500) DEFAULT NULL,
+  `linkedin` varchar(500) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `aboutpage_teamsection`
 --
 
-INSERT INTO `aboutpage_teamsection` (`id`, `name`, `position`) VALUES
-(1, 'Ajit Mallampati', 'Co-Founder & Director'),
-(2, 'Raavi', 'Co Founder & CTO');
-
+INSERT INTO `aboutpage_teamsection` (`id`, `name`, `about`, `slug`, `position`, `facebook`, `twitter`, `linkedin`, `image`) VALUES
+(1, 'Ajit', '\"The Synclo CCorp, led by The Founders, they are thriving community for coding enthusiasts. With Raavi\'s passion for technology, it\'s a place where innovation and learning thrive. Join us in shaping the future of coding and technology!\"', 'Ajit Mallampati', 'Co-Founder & Director', 'https://www.facebook.com', 'https://twitter.com', 'https://www.linkedin.com', 'team/rakib.png'),
+(2, 'Raavi', 'Meet Raavi, a passionate [Interest or Field] enthusiast from [Hometown or Current Location]. Their [Highlight a Remarkable Skill or Trait] and dedication to [Relevant Field or Cause] are truly remarkable. Join us in welcoming [Member\'s Name] and sharing in their journey toward [Shared Goal or Vision]', 'Raavi', 'Co Founder & CTO', 'https://www.facebook.com', 'https://twitter.com', 'https://www.linkedin.com', 'team/Tuhin.png');
 
 -- --------------------------------------------------------
 
@@ -2093,7 +2098,6 @@ INSERT INTO `servicepage_servicepageseo` (`id`, `meta_title`, `meta_description`
 --
 
 DROP TABLE IF EXISTS `settings_headerfooter`;
-
 CREATE TABLE `settings_headerfooter` (
   `id` bigint(20) NOT NULL,
   `footer_col1_subtitle` varchar(300) NOT NULL,
@@ -2118,7 +2122,7 @@ CREATE TABLE `settings_headerfooter` (
 --
 
 INSERT INTO `settings_headerfooter` (`id`, `footer_col1_subtitle`, `footer_col1_title`, `footer_col1_button`, `footer_col1_button_url`, `facebook`, `instagram`, `twitter`, `linkedin`, `youtube`, `pinterest`, `footer_col2_title1`, `footer_col2_description1`, `footer_col2_title2`, `footer_col2_description2`, `footer_copyright`) VALUES
-(1, 'READY TO DO THIS', 'Let\'s get to work', 'Get the offer', '/pricing', 'https://facebook.com', 'https://instagram.com', 'https://twitter.com', 'https://linkedin.com', 'https://youtube.com', 'https://pinterest.com', 'Resourses', '<ul>\r\n	<li><a href=\"/contact-us/\">Contact</a></li>\r\n	<li><a href=\"/privacy-policy/\">Privacy Policy</a></li>\r\n	<li><a href=\"/terms-conditions/\">Terms of Use</a></li>\r\n</ul>', 'Support', '<ul>\r\n	<li><a href=\"blog.html\">Blog</a></li>\r\n	<li><a href=\"case-study.html\">Case Studies</a></li>\r\n	<li><a href=\"portfolio.html\">Portfolio</a></li>\r\n</ul>', '© 2023. All rights reserved by The Synclo LLC');
+(1, 'READY TO DO THIS', 'Let\'s get to work', 'Get the offer', '/pricing', 'https://facebook.com', 'https://instagram.com', 'https://twitter.com', 'https://linkedin.com', 'https://youtube.com', 'https://pinterest.com', 'Resourses', '<ul>\r\n	<li><a href=\"/contact-us/\">Contact</a></li>\r\n	<li><a href=\"/privacy-policy/\">Privacy Policy</a></li>\r\n	<li><a href=\"/terms-conditions/\">Terms of Use</a></li>\r\n</ul>', 'Support', '<ul>\r\n	<li><a href=\"blog.html\">Blog</a></li>\r\n	<li><a href=\"case-study.html\">Case Studies</a></li>\r\n	<li><a href=\"portfolio.html\">Portfolio</a></li>\r\n</ul>', '© 2021. All rights reserved by The Synclo LLC');
 
 -- --------------------------------------------------------
 
